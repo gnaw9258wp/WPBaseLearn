@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C29DA30129154DC10D0C8294 /* libPods-WPBaseDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C537F2887385135434303CC /* libPods-WPBaseDemo.a */; };
 		F77CE6AE203065B900F545C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F77CE6AD203065B900F545C2 /* AppDelegate.m */; };
 		F77CE6B1203065B900F545C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F77CE6B0203065B900F545C2 /* ViewController.m */; };
 		F77CE6B4203065B900F545C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F77CE6B2203065B900F545C2 /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D2FABCDD05093DC1692CD92 /* Pods-WPBaseDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPBaseDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WPBaseDemo/Pods-WPBaseDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		8D977C6BE2B3892DF362898C /* Pods-WPBaseDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPBaseDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WPBaseDemo/Pods-WPBaseDemo.release.xcconfig"; sourceTree = "<group>"; };
+		9C537F2887385135434303CC /* libPods-WPBaseDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WPBaseDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77CE6A9203065B900F545C2 /* WPBaseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WPBaseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77CE6AC203065B900F545C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F77CE6AD203065B900F545C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C29DA30129154DC10D0C8294 /* libPods-WPBaseDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98C283D3CD4A1AE821FF6640 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C537F2887385135434303CC /* libPods-WPBaseDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC3B535527517ABC41EBED3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D2FABCDD05093DC1692CD92 /* Pods-WPBaseDemo.debug.xcconfig */,
+				8D977C6BE2B3892DF362898C /* Pods-WPBaseDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F77CE6A0203065B900F545C2 = {
 			isa = PBXGroup;
 			children = (
 				F77CE6AB203065B900F545C2 /* WPBaseDemo */,
 				F77CE6AA203065B900F545C2 /* Products */,
+				CC3B535527517ABC41EBED3A /* Pods */,
+				98C283D3CD4A1AE821FF6640 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F77CE6BF203065B900F545C2 /* Build configuration list for PBXNativeTarget "WPBaseDemo" */;
 			buildPhases = (
+				DE6F29E3F90C2062B4A94A0C /* [CP] Check Pods Manifest.lock */,
 				F77CE6A5203065B900F545C2 /* Sources */,
 				F77CE6A6203065B900F545C2 /* Frameworks */,
 				F77CE6A7203065B900F545C2 /* Resources */,
+				EC9BED8748837C79E958744C /* [CP] Embed Pods Frameworks */,
+				209D92B142358DC7BB190BA2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		209D92B142358DC7BB190BA2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WPBaseDemo/Pods-WPBaseDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE6F29E3F90C2062B4A94A0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WPBaseDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC9BED8748837C79E958744C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WPBaseDemo/Pods-WPBaseDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F77CE6A5203065B900F545C2 /* Sources */ = {
@@ -276,11 +354,13 @@
 		};
 		F77CE6C0203065B900F545C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D2FABCDD05093DC1692CD92 /* Pods-WPBaseDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EKM4TJ3AC5;
+				DEVELOPMENT_TEAM = BFM8M7NHYU;
 				INFOPLIST_FILE = WPBaseDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ct108sdk.CT108SDK.WPBaseDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,11 +370,13 @@
 		};
 		F77CE6C1203065B900F545C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D977C6BE2B3892DF362898C /* Pods-WPBaseDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EKM4TJ3AC5;
+				DEVELOPMENT_TEAM = BFM8M7NHYU;
 				INFOPLIST_FILE = WPBaseDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ct108sdk.CT108SDK.WPBaseDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
