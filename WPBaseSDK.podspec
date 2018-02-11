@@ -89,9 +89,9 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files = 'WPBaseSDK/Comment/**/*.{h,m}'  
-  s.public_header_files = 'WPBaseSDK/Comment/Person.h'
-  s.private_header_files = 'WPBaseSDK/Comment/Request/*.h'
+  s.source_files = 'WPBaseSDK/WPBaseSDK/Comment/**/*.{h,m}'  
+  s.public_header_files = 'WPBaseSDK/WPBaseSDK/Comment/Person.h'
+  s.private_header_files = 'WPBaseSDK/WPBaseSDK/Comment/Request/*.h'
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
