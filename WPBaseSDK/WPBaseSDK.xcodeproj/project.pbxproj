@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1125940AD6F43C837E6902B3 /* libPods-WPBaseSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E35FD976F75AC31C8A0DA6 /* libPods-WPBaseSDK.a */; };
 		F77CE6902030653800F545C2 /* WPBaseSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = F77CE68E2030653800F545C2 /* WPBaseSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F77CE69E2030656300F545C2 /* Person.h in Headers */ = {isa = PBXBuildFile; fileRef = F77CE69C2030656300F545C2 /* Person.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F77CE69F2030656300F545C2 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F77CE69D2030656300F545C2 /* Person.m */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2EE90A54D582722D57617A02 /* Pods-WPBaseSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPBaseSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-WPBaseSDK/Pods-WPBaseSDK.release.xcconfig"; sourceTree = "<group>"; };
+		52D9F5FE08B39A04D35DAFE8 /* Pods-WPBaseSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPBaseSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WPBaseSDK/Pods-WPBaseSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		D6E35FD976F75AC31C8A0DA6 /* libPods-WPBaseSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WPBaseSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77CE68B2030653800F545C2 /* WPBaseSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WPBaseSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77CE68E2030653800F545C2 /* WPBaseSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPBaseSDK.h; sourceTree = "<group>"; };
 		F77CE68F2030653800F545C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1125940AD6F43C837E6902B3 /* libPods-WPBaseSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C7E6F1340DAC950916D142A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52D9F5FE08B39A04D35DAFE8 /* Pods-WPBaseSDK.debug.xcconfig */,
+				2EE90A54D582722D57617A02 /* Pods-WPBaseSDK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AD2AAD31FA4E8AC454849507 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6E35FD976F75AC31C8A0DA6 /* libPods-WPBaseSDK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F77CE6812030653800F545C2 = {
 			isa = PBXGroup;
 			children = (
 				F77CE68D2030653800F545C2 /* WPBaseSDK */,
 				F77CE68C2030653800F545C2 /* Products */,
+				6C7E6F1340DAC950916D142A /* Pods */,
+				AD2AAD31FA4E8AC454849507 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,10 +124,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F77CE6932030653800F545C2 /* Build configuration list for PBXNativeTarget "WPBaseSDK" */;
 			buildPhases = (
+				C6D67498D0AEE71E57810DE8 /* [CP] Check Pods Manifest.lock */,
 				F77CE6862030653800F545C2 /* Sources */,
 				F77CE6872030653800F545C2 /* Frameworks */,
 				F77CE6882030653800F545C2 /* Headers */,
 				F77CE6892030653800F545C2 /* Resources */,
+				62CDA98286DACE110790E52D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,6 +181,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		62CDA98286DACE110790E52D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WPBaseSDK/Pods-WPBaseSDK-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WPBaseSDK/Pods-WPBaseSDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6D67498D0AEE71E57810DE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WPBaseSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F77CE6862030653800F545C2 /* Sources */ = {
@@ -281,6 +346,7 @@
 		};
 		F77CE6942030653800F545C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52D9F5FE08B39A04D35DAFE8 /* Pods-WPBaseSDK.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +368,7 @@
 		};
 		F77CE6952030653800F545C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EE90A54D582722D57617A02 /* Pods-WPBaseSDK.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;

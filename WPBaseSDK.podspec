@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "WPBaseSDK"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "A short description of WPBaseSDK."
 
   # This description is used to generate tags and improve search results.
@@ -92,6 +92,7 @@ Pod::Spec.new do |s|
   s.source_files = 'WPBaseSDK/WPBaseSDK/Comment/**/*.{h,m}'  
   s.public_header_files = 'WPBaseSDK/WPBaseSDK/Comment/Person.h'
   s.private_header_files = 'WPBaseSDK/WPBaseSDK/Comment/Request/*.h'
+  s.dependency "MJRefresh"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"

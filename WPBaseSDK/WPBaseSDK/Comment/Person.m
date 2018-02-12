@@ -7,7 +7,7 @@
 //
 
 #import "Person.h"
-
+#import <MJRefresh/MJRefresh.h>
 @implementation Person
 - (void)run{
     NSLog(@"run");
